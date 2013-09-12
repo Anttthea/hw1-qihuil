@@ -12,9 +12,9 @@
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
         <featureDescription>
-          <name>confidence</name>
+          <name>TokenBaseAnno</name>
           <description/>
-          <rangeTypeName>uima.cas.Double</rangeTypeName>
+          <rangeTypeName>BaseAnnotaion</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>
@@ -24,9 +24,9 @@
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
         <featureDescription>
-          <name>confidence</name>
+          <name>QuesBaseAnno</name>
           <description/>
-          <rangeTypeName>uima.cas.Double</rangeTypeName>
+          <rangeTypeName>BaseAnnotaion</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>
@@ -36,14 +36,14 @@
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
         <featureDescription>
-          <name>confidence</name>
-          <description/>
-          <rangeTypeName>uima.cas.Double</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
           <name>isCorrect</name>
           <description/>
           <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>AnswerBaseAnno</name>
+          <description/>
+          <rangeTypeName>BaseAnnotaion</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>
@@ -53,15 +53,15 @@
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
         <featureDescription>
-          <name>confidence</name>
-          <description/>
-          <rangeTypeName>uima.cas.Double</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
           <name>elements</name>
           <description/>
           <rangeTypeName>uima.cas.FSArray</rangeTypeName>
           <elementType>Token</elementType>
+        </featureDescription>
+      <featureDescription>
+          <name>NGramBaseAnno</name>
+          <description/>
+          <rangeTypeName>BaseAnnotaion</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>
@@ -71,11 +71,6 @@
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
         <featureDescription>
-          <name>confidence</name>
-          <description/>
-          <rangeTypeName>uima.cas.Double</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
           <name>score</name>
           <description/>
           <rangeTypeName>uima.cas.Double</rangeTypeName>
@@ -84,6 +79,28 @@
           <name>answer</name>
           <description/>
           <rangeTypeName>Answer</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>AnswerBaseAnno</name>
+          <description/>
+          <rangeTypeName>BaseAnnotaion</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  <typeDescription>
+      <name>BaseAnnotaion</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>source</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>confidence</name>
+          <description/>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>

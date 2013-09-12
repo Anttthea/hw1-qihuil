@@ -10,8 +10,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Tue Sep 10 17:16:24 EDT 2013
- * XML source: /home/lenovo/git/hw1-qihuil/typeSystemDescriptor.xml
+ * Updated by JCasGen Wed Sep 11 20:01:46 EDT 2013
+ * XML source: /home/lenovo/git/hw1-qihuil/src/main/resources/typeSystemDescriptor.xml
  * @generated */
 public class Token extends Annotation {
   /** @generated
@@ -60,21 +60,21 @@ public class Token extends Annotation {
   private void readObject() {/*default - does nothing empty block */}
      
   //*--------------*
-  //* Feature: confidence
+  //* Feature: TokenBaseAnno
 
-  /** getter for confidence - gets 
+  /** getter for TokenBaseAnno - gets 
    * @generated */
-  public double getConfidence() {
-    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_confidence == null)
-      jcasType.jcas.throwFeatMissing("confidence", "Token");
-    return jcasType.ll_cas.ll_getDoubleValue(addr, ((Token_Type)jcasType).casFeatCode_confidence);}
+  public BaseAnnotaion getTokenBaseAnno() {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_TokenBaseAnno == null)
+      jcasType.jcas.throwFeatMissing("TokenBaseAnno", "Token");
+    return (BaseAnnotaion)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Token_Type)jcasType).casFeatCode_TokenBaseAnno)));}
     
-  /** setter for confidence - sets  
+  /** setter for TokenBaseAnno - sets  
    * @generated */
-  public void setConfidence(double v) {
-    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_confidence == null)
-      jcasType.jcas.throwFeatMissing("confidence", "Token");
-    jcasType.ll_cas.ll_setDoubleValue(addr, ((Token_Type)jcasType).casFeatCode_confidence, v);}    
+  public void setTokenBaseAnno(BaseAnnotaion v) {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_TokenBaseAnno == null)
+      jcasType.jcas.throwFeatMissing("TokenBaseAnno", "Token");
+    jcasType.ll_cas.ll_setRefValue(addr, ((Token_Type)jcasType).casFeatCode_TokenBaseAnno, jcasType.ll_cas.ll_getFSRef(v));}    
   }
 
     

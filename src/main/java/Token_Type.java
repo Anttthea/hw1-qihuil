@@ -13,7 +13,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Tue Sep 10 17:16:24 EDT 2013
+ * Updated by JCasGen Wed Sep 11 20:01:46 EDT 2013
  * @generated */
 public class Token_Type extends Annotation_Type {
   /** @generated */
@@ -46,20 +46,20 @@ public class Token_Type extends Annotation_Type {
 
 
   /** @generated */
-  final Feature casFeat_confidence;
+  final Feature casFeat_TokenBaseAnno;
   /** @generated */
-  final int     casFeatCode_confidence;
+  final int     casFeatCode_TokenBaseAnno;
   /** @generated */ 
-  public double getConfidence(int addr) {
-        if (featOkTst && casFeat_confidence == null)
-      jcas.throwFeatMissing("confidence", "Token");
-    return ll_cas.ll_getDoubleValue(addr, casFeatCode_confidence);
+  public int getTokenBaseAnno(int addr) {
+        if (featOkTst && casFeat_TokenBaseAnno == null)
+      jcas.throwFeatMissing("TokenBaseAnno", "Token");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_TokenBaseAnno);
   }
   /** @generated */    
-  public void setConfidence(int addr, double v) {
-        if (featOkTst && casFeat_confidence == null)
-      jcas.throwFeatMissing("confidence", "Token");
-    ll_cas.ll_setDoubleValue(addr, casFeatCode_confidence, v);}
+  public void setTokenBaseAnno(int addr, int v) {
+        if (featOkTst && casFeat_TokenBaseAnno == null)
+      jcas.throwFeatMissing("TokenBaseAnno", "Token");
+    ll_cas.ll_setRefValue(addr, casFeatCode_TokenBaseAnno, v);}
     
   
 
@@ -72,8 +72,8 @@ public class Token_Type extends Annotation_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_confidence = jcas.getRequiredFeatureDE(casType, "confidence", "uima.cas.Double", featOkTst);
-    casFeatCode_confidence  = (null == casFeat_confidence) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_confidence).getCode();
+    casFeat_TokenBaseAnno = jcas.getRequiredFeatureDE(casType, "TokenBaseAnno", "BaseAnnotaion", featOkTst);
+    casFeatCode_TokenBaseAnno  = (null == casFeat_TokenBaseAnno) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_TokenBaseAnno).getCode();
 
   }
 }

@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Tue Sep 10 17:16:24 EDT 2013
- * XML source: /home/lenovo/git/hw1-qihuil/typeSystemDescriptor.xml
+ * Updated by JCasGen Wed Sep 11 20:01:46 EDT 2013
+ * XML source: /home/lenovo/git/hw1-qihuil/src/main/resources/typeSystemDescriptor.xml
  * @generated */
 public class NGram extends Annotation {
   /** @generated
@@ -63,24 +63,6 @@ public class NGram extends Annotation {
  
     
   //*--------------*
-  //* Feature: confidence
-
-  /** getter for confidence - gets 
-   * @generated */
-  public double getConfidence() {
-    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_confidence == null)
-      jcasType.jcas.throwFeatMissing("confidence", "NGram");
-    return jcasType.ll_cas.ll_getDoubleValue(addr, ((NGram_Type)jcasType).casFeatCode_confidence);}
-    
-  /** setter for confidence - sets  
-   * @generated */
-  public void setConfidence(double v) {
-    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_confidence == null)
-      jcasType.jcas.throwFeatMissing("confidence", "NGram");
-    jcasType.ll_cas.ll_setDoubleValue(addr, ((NGram_Type)jcasType).casFeatCode_confidence, v);}    
-   
-    
-  //*--------------*
   //* Feature: elements
 
   /** getter for elements - gets 
@@ -112,6 +94,24 @@ public class NGram extends Annotation {
       jcasType.jcas.throwFeatMissing("elements", "NGram");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i);
     jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_elements), i, jcasType.ll_cas.ll_getFSRef(v));}
+   
+    
+  //*--------------*
+  //* Feature: NGramBaseAnno
+
+  /** getter for NGramBaseAnno - gets 
+   * @generated */
+  public BaseAnnotaion getNGramBaseAnno() {
+    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_NGramBaseAnno == null)
+      jcasType.jcas.throwFeatMissing("NGramBaseAnno", "NGram");
+    return (BaseAnnotaion)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((NGram_Type)jcasType).casFeatCode_NGramBaseAnno)));}
+    
+  /** setter for NGramBaseAnno - sets  
+   * @generated */
+  public void setNGramBaseAnno(BaseAnnotaion v) {
+    if (NGram_Type.featOkTst && ((NGram_Type)jcasType).casFeat_NGramBaseAnno == null)
+      jcasType.jcas.throwFeatMissing("NGramBaseAnno", "NGram");
+    jcasType.ll_cas.ll_setRefValue(addr, ((NGram_Type)jcasType).casFeatCode_NGramBaseAnno, jcasType.ll_cas.ll_getFSRef(v));}    
   }
 
     

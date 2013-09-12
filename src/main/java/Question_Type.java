@@ -13,7 +13,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Tue Sep 10 17:16:24 EDT 2013
+ * Updated by JCasGen Wed Sep 11 20:01:46 EDT 2013
  * @generated */
 public class Question_Type extends Annotation_Type {
   /** @generated */
@@ -44,20 +44,20 @@ public class Question_Type extends Annotation_Type {
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("Question");
  
   /** @generated */
-  final Feature casFeat_confidence;
+  final Feature casFeat_QuesBaseAnno;
   /** @generated */
-  final int     casFeatCode_confidence;
+  final int     casFeatCode_QuesBaseAnno;
   /** @generated */ 
-  public double getConfidence(int addr) {
-        if (featOkTst && casFeat_confidence == null)
-      jcas.throwFeatMissing("confidence", "Question");
-    return ll_cas.ll_getDoubleValue(addr, casFeatCode_confidence);
+  public int getQuesBaseAnno(int addr) {
+        if (featOkTst && casFeat_QuesBaseAnno == null)
+      jcas.throwFeatMissing("QuesBaseAnno", "Question");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_QuesBaseAnno);
   }
   /** @generated */    
-  public void setConfidence(int addr, double v) {
-        if (featOkTst && casFeat_confidence == null)
-      jcas.throwFeatMissing("confidence", "Question");
-    ll_cas.ll_setDoubleValue(addr, casFeatCode_confidence, v);}
+  public void setQuesBaseAnno(int addr, int v) {
+        if (featOkTst && casFeat_QuesBaseAnno == null)
+      jcas.throwFeatMissing("QuesBaseAnno", "Question");
+    ll_cas.ll_setRefValue(addr, casFeatCode_QuesBaseAnno, v);}
     
   
 
@@ -70,8 +70,8 @@ public class Question_Type extends Annotation_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_confidence = jcas.getRequiredFeatureDE(casType, "confidence", "uima.cas.Double", featOkTst);
-    casFeatCode_confidence  = (null == casFeat_confidence) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_confidence).getCode();
+    casFeat_QuesBaseAnno = jcas.getRequiredFeatureDE(casType, "QuesBaseAnno", "BaseAnnotaion", featOkTst);
+    casFeatCode_QuesBaseAnno  = (null == casFeat_QuesBaseAnno) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_QuesBaseAnno).getCode();
 
   }
 }

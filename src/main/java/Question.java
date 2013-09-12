@@ -10,8 +10,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Tue Sep 10 17:16:24 EDT 2013
- * XML source: /home/lenovo/git/hw1-qihuil/typeSystemDescriptor.xml
+ * Updated by JCasGen Wed Sep 11 20:01:46 EDT 2013
+ * XML source: /home/lenovo/git/hw1-qihuil/src/main/resources/typeSystemDescriptor.xml
  * @generated */
 public class Question extends Annotation {
   /** @generated
@@ -62,21 +62,21 @@ public class Question extends Annotation {
  
     
   //*--------------*
-  //* Feature: confidence
+  //* Feature: QuesBaseAnno
 
-  /** getter for confidence - gets 
+  /** getter for QuesBaseAnno - gets 
    * @generated */
-  public double getConfidence() {
-    if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_confidence == null)
-      jcasType.jcas.throwFeatMissing("confidence", "Question");
-    return jcasType.ll_cas.ll_getDoubleValue(addr, ((Question_Type)jcasType).casFeatCode_confidence);}
+  public BaseAnnotaion getQuesBaseAnno() {
+    if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_QuesBaseAnno == null)
+      jcasType.jcas.throwFeatMissing("QuesBaseAnno", "Question");
+    return (BaseAnnotaion)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Question_Type)jcasType).casFeatCode_QuesBaseAnno)));}
     
-  /** setter for confidence - sets  
+  /** setter for QuesBaseAnno - sets  
    * @generated */
-  public void setConfidence(double v) {
-    if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_confidence == null)
-      jcasType.jcas.throwFeatMissing("confidence", "Question");
-    jcasType.ll_cas.ll_setDoubleValue(addr, ((Question_Type)jcasType).casFeatCode_confidence, v);}    
+  public void setQuesBaseAnno(BaseAnnotaion v) {
+    if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_QuesBaseAnno == null)
+      jcasType.jcas.throwFeatMissing("QuesBaseAnno", "Question");
+    jcasType.ll_cas.ll_setRefValue(addr, ((Question_Type)jcasType).casFeatCode_QuesBaseAnno, jcasType.ll_cas.ll_getFSRef(v));}    
   }
 
     

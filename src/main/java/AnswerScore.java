@@ -10,8 +10,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Tue Sep 10 17:16:24 EDT 2013
- * XML source: /home/lenovo/git/hw1-qihuil/typeSystemDescriptor.xml
+ * Updated by JCasGen Wed Sep 11 20:01:46 EDT 2013
+ * XML source: /home/lenovo/git/hw1-qihuil/src/main/resources/typeSystemDescriptor.xml
  * @generated */
 public class AnswerScore extends Annotation {
   /** @generated
@@ -62,24 +62,6 @@ public class AnswerScore extends Annotation {
  
     
   //*--------------*
-  //* Feature: confidence
-
-  /** getter for confidence - gets 
-   * @generated */
-  public double getConfidence() {
-    if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_confidence == null)
-      jcasType.jcas.throwFeatMissing("confidence", "AnswerScore");
-    return jcasType.ll_cas.ll_getDoubleValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_confidence);}
-    
-  /** setter for confidence - sets  
-   * @generated */
-  public void setConfidence(double v) {
-    if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_confidence == null)
-      jcasType.jcas.throwFeatMissing("confidence", "AnswerScore");
-    jcasType.ll_cas.ll_setDoubleValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_confidence, v);}    
-   
-    
-  //*--------------*
   //* Feature: score
 
   /** getter for score - gets 
@@ -113,6 +95,24 @@ public class AnswerScore extends Annotation {
     if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_answer == null)
       jcasType.jcas.throwFeatMissing("answer", "AnswerScore");
     jcasType.ll_cas.ll_setRefValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_answer, jcasType.ll_cas.ll_getFSRef(v));}    
+   
+    
+  //*--------------*
+  //* Feature: AnswerBaseAnno
+
+  /** getter for AnswerBaseAnno - gets 
+   * @generated */
+  public BaseAnnotaion getAnswerBaseAnno() {
+    if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_AnswerBaseAnno == null)
+      jcasType.jcas.throwFeatMissing("AnswerBaseAnno", "AnswerScore");
+    return (BaseAnnotaion)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_AnswerBaseAnno)));}
+    
+  /** setter for AnswerBaseAnno - sets  
+   * @generated */
+  public void setAnswerBaseAnno(BaseAnnotaion v) {
+    if (AnswerScore_Type.featOkTst && ((AnswerScore_Type)jcasType).casFeat_AnswerBaseAnno == null)
+      jcasType.jcas.throwFeatMissing("AnswerBaseAnno", "AnswerScore");
+    jcasType.ll_cas.ll_setRefValue(addr, ((AnswerScore_Type)jcasType).casFeatCode_AnswerBaseAnno, jcasType.ll_cas.ll_getFSRef(v));}    
   }
 
     

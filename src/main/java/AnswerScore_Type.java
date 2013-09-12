@@ -13,7 +13,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Tue Sep 10 17:16:24 EDT 2013
+ * Updated by JCasGen Wed Sep 11 20:01:46 EDT 2013
  * @generated */
 public class AnswerScore_Type extends Annotation_Type {
   /** @generated */
@@ -42,24 +42,6 @@ public class AnswerScore_Type extends Annotation_Type {
      @modifiable */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("AnswerScore");
- 
-  /** @generated */
-  final Feature casFeat_confidence;
-  /** @generated */
-  final int     casFeatCode_confidence;
-  /** @generated */ 
-  public double getConfidence(int addr) {
-        if (featOkTst && casFeat_confidence == null)
-      jcas.throwFeatMissing("confidence", "AnswerScore");
-    return ll_cas.ll_getDoubleValue(addr, casFeatCode_confidence);
-  }
-  /** @generated */    
-  public void setConfidence(int addr, double v) {
-        if (featOkTst && casFeat_confidence == null)
-      jcas.throwFeatMissing("confidence", "AnswerScore");
-    ll_cas.ll_setDoubleValue(addr, casFeatCode_confidence, v);}
-    
-  
  
   /** @generated */
   final Feature casFeat_score;
@@ -96,6 +78,24 @@ public class AnswerScore_Type extends Annotation_Type {
     ll_cas.ll_setRefValue(addr, casFeatCode_answer, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_AnswerBaseAnno;
+  /** @generated */
+  final int     casFeatCode_AnswerBaseAnno;
+  /** @generated */ 
+  public int getAnswerBaseAnno(int addr) {
+        if (featOkTst && casFeat_AnswerBaseAnno == null)
+      jcas.throwFeatMissing("AnswerBaseAnno", "AnswerScore");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_AnswerBaseAnno);
+  }
+  /** @generated */    
+  public void setAnswerBaseAnno(int addr, int v) {
+        if (featOkTst && casFeat_AnswerBaseAnno == null)
+      jcas.throwFeatMissing("AnswerBaseAnno", "AnswerScore");
+    ll_cas.ll_setRefValue(addr, casFeatCode_AnswerBaseAnno, v);}
+    
+  
 
 
 
@@ -106,16 +106,16 @@ public class AnswerScore_Type extends Annotation_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_confidence = jcas.getRequiredFeatureDE(casType, "confidence", "uima.cas.Double", featOkTst);
-    casFeatCode_confidence  = (null == casFeat_confidence) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_confidence).getCode();
-
- 
     casFeat_score = jcas.getRequiredFeatureDE(casType, "score", "uima.cas.Double", featOkTst);
     casFeatCode_score  = (null == casFeat_score) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_score).getCode();
 
  
     casFeat_answer = jcas.getRequiredFeatureDE(casType, "answer", "Answer", featOkTst);
     casFeatCode_answer  = (null == casFeat_answer) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_answer).getCode();
+
+ 
+    casFeat_AnswerBaseAnno = jcas.getRequiredFeatureDE(casType, "AnswerBaseAnno", "BaseAnnotaion", featOkTst);
+    casFeatCode_AnswerBaseAnno  = (null == casFeat_AnswerBaseAnno) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_AnswerBaseAnno).getCode();
 
   }
 }

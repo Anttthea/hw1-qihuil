@@ -13,7 +13,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Tue Sep 10 17:16:24 EDT 2013
+ * Updated by JCasGen Wed Sep 11 20:01:46 EDT 2013
  * @generated */
 public class NGram_Type extends Annotation_Type {
   /** @generated */
@@ -42,24 +42,6 @@ public class NGram_Type extends Annotation_Type {
      @modifiable */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("NGram");
- 
-  /** @generated */
-  final Feature casFeat_confidence;
-  /** @generated */
-  final int     casFeatCode_confidence;
-  /** @generated */ 
-  public double getConfidence(int addr) {
-        if (featOkTst && casFeat_confidence == null)
-      jcas.throwFeatMissing("confidence", "NGram");
-    return ll_cas.ll_getDoubleValue(addr, casFeatCode_confidence);
-  }
-  /** @generated */    
-  public void setConfidence(int addr, double v) {
-        if (featOkTst && casFeat_confidence == null)
-      jcas.throwFeatMissing("confidence", "NGram");
-    ll_cas.ll_setDoubleValue(addr, casFeatCode_confidence, v);}
-    
-  
  
   /** @generated */
   final Feature casFeat_elements;
@@ -97,6 +79,24 @@ public class NGram_Type extends Annotation_Type {
     ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_elements), i, v);
   }
  
+ 
+  /** @generated */
+  final Feature casFeat_NGramBaseAnno;
+  /** @generated */
+  final int     casFeatCode_NGramBaseAnno;
+  /** @generated */ 
+  public int getNGramBaseAnno(int addr) {
+        if (featOkTst && casFeat_NGramBaseAnno == null)
+      jcas.throwFeatMissing("NGramBaseAnno", "NGram");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_NGramBaseAnno);
+  }
+  /** @generated */    
+  public void setNGramBaseAnno(int addr, int v) {
+        if (featOkTst && casFeat_NGramBaseAnno == null)
+      jcas.throwFeatMissing("NGramBaseAnno", "NGram");
+    ll_cas.ll_setRefValue(addr, casFeatCode_NGramBaseAnno, v);}
+    
+  
 
 
 
@@ -107,12 +107,12 @@ public class NGram_Type extends Annotation_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_confidence = jcas.getRequiredFeatureDE(casType, "confidence", "uima.cas.Double", featOkTst);
-    casFeatCode_confidence  = (null == casFeat_confidence) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_confidence).getCode();
-
- 
     casFeat_elements = jcas.getRequiredFeatureDE(casType, "elements", "uima.cas.FSArray", featOkTst);
     casFeatCode_elements  = (null == casFeat_elements) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_elements).getCode();
+
+ 
+    casFeat_NGramBaseAnno = jcas.getRequiredFeatureDE(casType, "NGramBaseAnno", "BaseAnnotaion", featOkTst);
+    casFeatCode_NGramBaseAnno  = (null == casFeat_NGramBaseAnno) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_NGramBaseAnno).getCode();
 
   }
 }
